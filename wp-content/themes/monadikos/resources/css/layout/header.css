@@ -1,0 +1,97 @@
+header {
+    .banner-text {
+        p {
+            @apply font-semibold;
+
+            a {
+                @apply font-normal;
+            }
+        }
+    }
+
+    .menu-container {
+        @apply flex items-center;
+
+        .menu {
+            @apply flex items-center gap-4;
+        }
+
+        .menu-item {
+            @apply text-base font-medium;
+
+            a {
+                @apply text-[#262626] text-xs px-3 py-5 no-underline;
+            }
+        }
+    }
+
+    section.desktop-header {
+        div.menu-wrapper > nav ul {
+            @apply flex-row;
+        }
+    }
+
+    nav#mobile-nav {
+        @apply absolute left-full transition-all duration-300;
+        &.active {
+            @apply left-0;
+        }
+        ul {
+            @apply w-full pt-0;
+        }
+
+        li {
+            a {
+                @apply font-montserrat text-xl text-black py-8 px-6 border-b border-b-primary no-underline;
+            }
+        }
+
+
+        li.menu-item-has-children {
+            & > a {
+                @apply flex flex-row;
+                &::after {
+                    content: "\f054";
+                    /* Set the font and weight for this icon style */
+                    font: var(--fa-font-solid);
+                    /* Make sure icons render pixel-perfect */
+                    -webkit-font-smoothing: antialiased;
+                    @apply text-white duration-300 transition-all;
+                }
+            }
+
+            &.active {
+                & > a::after {
+                    @apply rotate-90;
+                }
+                ul.sub-menu {
+                    @apply block;
+                    animation: fadeIn 0.3s ease-in-out forwards;
+                    
+                    a {
+                        @apply !font-normal;
+                    }
+                }
+            }
+
+            ul.sub-menu {
+                @apply hidden m-0 p-0;
+                li a {
+                    @apply pl-12;
+                }
+            }
+        }
+
+        form.search-form {
+            @apply absolute hidden;
+
+            &.active {
+                @apply block;
+            }
+        }
+    }
+
+    .menu :where(li) {
+        position: static;
+    }
+}

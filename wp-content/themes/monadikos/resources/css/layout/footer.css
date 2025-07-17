@@ -1,0 +1,24 @@
+footer {
+    section.widget {
+        @apply px-5 w-[14.375rem] self-stretch;
+
+        > div {
+            @apply max-desktop:flex max-desktop:justify-center;
+        }
+
+        h3 {
+            @apply font-montserrat text-base font-semibold leading-[1.31rem] text-neutral-800 tracking-[0.42px] mb-5; /* Footer widget title */
+        }
+
+        ul {
+            @apply flex flex-col gap-[.625rem] max-desktop:items-center p-0;
+
+            li {
+                @apply font-montserrat text-sm font-normal leading-[1.25rem] text-gray tracking-[0.2px]; /* Footer widget item */
+                a {
+                    @apply no-underline p-0;
+                }
+            }
+        }
+    }
+}

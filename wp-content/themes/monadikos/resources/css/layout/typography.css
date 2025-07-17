@@ -1,0 +1,83 @@
+/* Typography styles for Figma selection, based on test-typography.css and Figma design tokens */
+
+/* Headings */
+.text-display-500 {
+  @apply font-montserrat text-[2.875rem] font-normal leading-[3.45rem] text-white tracking-[0.92px]; /* BE BOLD. BE YOU. (Section 01) */
+}
+.text-display-400 {
+  @apply font-montserrat text-[2.5rem] font-normal leading-[3rem] text-white tracking-[0.2px]; /* New Arrivals, Best-Sellers */
+}
+.text-display-200 {
+  @apply font-montserrat text-[2rem] font-normal leading-[2.5rem] text-neutral-800; /* Monadikos Looks Good On You! */
+}
+.text-display-100 {
+  @apply font-montserrat text-[1.5rem] font-normal leading-[2.08rem] text-black; /* Our Favorites, Here’s the Tea */
+}
+.text-display-100-demi {
+  @apply font-montserrat font-semibold text-[1.5rem] leading-[2.08rem] text-neutral-800 tracking-[0.2px]; /* Section titles */
+}
+
+/* Paragraphs & body text */
+.text-body-base {
+  @apply font-inter text-base font-normal leading-none text-black; /* Input field value */
+}
+.text-text-400 {
+  @apply font-montserrat text-base font-normal leading-[1.5rem] text-white tracking-[0.64px]; /* Section 01 description, Section 04 description */
+}
+.text-quote {
+  @apply font-montserrat text-[1.5rem] font-normal leading-[2.08rem] text-black italic; /* Quotes, testimonials */
+}
+.text-quote-author {
+  @apply font-montserrat text-[0.875rem] font-normal leading-[1.25rem] text-black tracking-[1.4px]; /* Quote author */
+}
+.text-newsletter-title {
+  @apply font-montserrat font-semibold text-[0.875rem] leading-[1.31rem] text-neutral-800 tracking-[0.42px]; /* Newsletter title */
+}
+.text-newsletter-desc {
+  @apply font-montserrat text-[0.875rem] font-normal leading-[1.05rem] text-neutral-800 tracking-[1.4px]; /* Newsletter description */
+}
+.text-tab {
+  @apply font-montserrat text-[0.75rem] font-normal leading-[1rem] text-neutral-800 tracking-[0.2px]; /* Tab text */
+}
+.text-button-secondary {
+  @apply font-montserrat font-bold text-[0.875rem] leading-[1.05rem] text-white tracking-[1.4px] bg-blue px-6 py-3 rounded w-60 text-center; /* Secondary button */
+}
+.text-text-300 {
+  @apply font-montserrat text-[0.875rem] font-normal leading-[1.05rem] text-neutral-800 tracking-[1.4px]; /* Product price, Newsletter, Button text */
+}
+.text-text-300-demi {
+  @apply font-montserrat font-semibold text-[0.875rem] leading-[1.31rem] text-neutral-800 tracking-[0.42px]; /* Newsletter title, Complimentary Shipping */
+}
+.text-text-300-underline {
+  @apply font-montserrat text-[0.875rem] font-normal leading-[1.25rem] text-neutral-800 underline; /* Send us your photos */
+}
+.text-text-200 {
+  @apply font-montserrat text-[0.75rem] font-normal leading-[1rem] text-neutral-800 tracking-[0.2px]; /* Tab text, Sale banner, Product color */
+}
+
+/* Buttons */
+.btn-primary {
+  @apply font-montserrat font-bold text-[0.875rem] leading-[1.05rem] text-neutral-800 tracking-[1.4px] bg-white px-6 py-3 rounded w-60 text-center;
+}
+
+/* Utility classes for color tokens */
+.text-white { @apply text-white; }
+.text-black { @apply text-black; }
+.text-neutral-800 { @apply text-neutral-800; }
+.text-neutral-500 { @apply text-neutral-500; }
+.text-neutral-100 { @apply text-neutral-100; }
+.bg-white { @apply bg-white; }
+.bg-black { @apply bg-black; }
+.bg-neutral-800 { @apply bg-neutral-800; }
+.bg-neutral-500 { @apply bg-neutral-500; }
+.bg-neutral-100 { @apply bg-neutral-100; }
+.bg-promenade { @apply bg-[#7A5CFA]; }
+.bg-grey { @apply bg-[#737373]; }
+.bg-f5f4f4 { @apply bg-[#F5F4F4]; }
+.bg-dddbdc { @apply bg-[#DDDBDC]; }
+
+/* Example usage:
+  <h1 class="text-display-500">BE BOLD. BE YOU.</h1>
+  <p class="text-text-400">Make a statement in the saddle...</p>
+  <button class="btn-primary">SHOP NOW</button>
+*/

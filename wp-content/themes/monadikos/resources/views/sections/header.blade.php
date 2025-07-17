@@ -1,11 +1,19 @@
 <header class="banner">
-  <a class="brand" href="{{ home_url('/') }}">
-    {!! $siteName !!}
-  </a>
+    <section class="site-banner bg-black">  
+        @if (get_field('sale_banner', 'options'))
+            <div class="banner-text text-text-200 text-white text-center py-2">
+                {!! get_field('sale_banner', 'options') !!}
+            </div>
+        @else
+            <h1 class="text-display-500">Welcome to Monadikos</h1>
+        @endif
+    </section>
 
-  @if (has_nav_menu('primary_navigation'))
-    <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
-    </nav>
-  @endif
+    <section class="max-desktop:hidden desktop-header">
+        @include('partials.desktop-header')
+    </section>
+
+    <section class="desktop:hidden mobile-header">
+        @include('partials.mobile-header')
+    </section>
 </header>

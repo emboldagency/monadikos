@@ -14,7 +14,13 @@ export default defineConfig({
         'resources/css/editor.css',
         'resources/js/editor.js',
       ],
-      refresh: true,
+      refresh: [
+        './index.php',
+        './app/**/*.php',
+        './resources/**/*.{php,vue,js}',
+        '../../plugins/embold-tailwind-blocks/**/*.php',
+        'resources/css/**/*.css',
+      ],
     }),
 
     wordpressPlugin(),
